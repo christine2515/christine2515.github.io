@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="navigation">
-          <NavLink exact to="/" className="nav-link" activeClassName="active-nav-link">TIFFANYWANG</NavLink>
+          <NavLink exact to="/" className="nav-link" activeClassName="active-nav-link">CHRISTINE TU</NavLink>
           <div className="right">
             <NavLink exact to="/about" className="nav-link" activeClassName="active-nav-link">ABOUT</NavLink>
             <NavLink exact to="/work" className="nav-link" activeClassName="active-nav-link">WORK</NavLink>

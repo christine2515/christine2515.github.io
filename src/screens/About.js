@@ -38,7 +38,7 @@ function About() {
           style={{ width: '260px', cursor: 'crosshair' }}
           onMouseEnter={() => { toggleDisplay(true); }}
           onMouseLeave={() => { toggleDisplay(false); }}
-          >I'm Tiffany!</h2>
+          >I'm Christine!</h2>
         <br />
         <p>I’m a software engineer, artist, and computer science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noreferrer"><IoSchool className="icon" />UC Berkeley</a>.</p>
         <br /><br />

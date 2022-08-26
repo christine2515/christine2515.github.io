@@ -34,7 +34,7 @@ function Home() {
   return (
     <div className="home">
       <div className="title">
-        <h1>hi, i'm <img src={sparkles_g} alt="" className="sparkle sparkle-green" /><br />{color("tiffanywang")}<img src={sparkles_y} alt="" className="sparkle sparkle-yellow" /></h1>
+        <h1>hi, i'm <img src={sparkles_g} alt="" className="sparkle sparkle-green" /><br />{color("Christine Tu")}<img src={sparkles_y} alt="" className="sparkle sparkle-yellow" /></h1>
         <p>a <b>{attributes[timer % attributes.length]}</b>
         <br />
         building to spark joy :)
