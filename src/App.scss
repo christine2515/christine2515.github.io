@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+$black: rgba(64, 63, 67, 1);
+$gray: rgba(64, 63, 67, 0.5);
+$white: rgba(248, 237, 235, 1);
+$red: rgba(250, 135, 27, 1);
+$orange: rgba(248, 187, 52, 1);
+$yellow: rgba(242, 213, 142, 1);
+$darkyellow: rgba(241, 187, 37, 1);
+$lightgreen: rgba(163, 201, 141, 1);
+$green: rgba(137, 177, 154, 1);
+
+@font-face {
+  font-family: 'Augillion';
+  src: url(assets/Augillion.otf);
+}
+
+.red { color: $red; }
+.orange { color: $orange; }
+.yellow { color: $yellow; }
+.lightgreen { color: $lightgreen; }
+.green { color: $green; }
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+/* GENERAL STYLING */
+body {
+  background-color: $white;
+  color: $black;
+  font-family: 'IBM Plex Mono';
+  width: calc(min(100%, 1200px));
+
+  h1 {
+    font-family: 'Augillion';
+    font-weight: 400;
+    font-size: calc(min(max(10vw, 42px), 80px));
+    margin: 0;
+  }
+
+  h2 {
+    font-family: 'Augillion';
+    font-weight: 400;
+    font-size: calc(min(max(7vw, 40px), 50px));
+    margin: 0;
+  }
+
+  p, ul {
+    font-size: calc(min(max(2vw, 15px), 18px));
+    margin: 0;
+    line-height: 24px;
+  }
+
+  a {
+    color: $black;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  button {
+    font-family: 'IBM Plex Mono';
+    font-size: calc(min(max(2vw, 15px), 16px));
+    color: $black;
+    opacity: 0.5;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .active {
+    opacity: 1;
+    color: $red;
+  }
+
+  .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .icon {
+    margin-bottom: -3px;
+    margin-right: 7px;
+  }
+}
+
+/* RESPONSIVENESS - MOBILE */
+@media (max-width: 600px) {
+  .App {
+    padding: 40px 30px;
+  }
+
+  .navigation {
+    display: inline-flex;
+  }
+  
+  .home .card .description {
+    margin-top: 10px;
+  }
+}
+
+/* RESPONSIVENESS - MOBILE */
+@media (min-width: 601px) {
+  .App {
+    padding: 40px 110px;
+  }
+}
+
+/* RESPONSIVENESS - DESKTOP */
+@media (min-width: 901px) {
+  .App {
+    padding: 40px 110px;
+  }
+
+  .home .card {
+    display: flex;
+
+    .description {
+      margin-left: 20px;
+    }
+  }
+}
+
+/* NAV BAR */
+.navigation {
+  font-size: calc(min(max(2vw, 13px), 18px));
+
+  .nav-link {
+    text-decoration: none;
+    border: none;
+  }
+
+  .right {
+    float: right;
+    a { margin-left: 50px; }
+  }
+
+  .active-nav-link {
+    color: $red;
+    text-decoration: line-through;
+    pointer-events: none;
+  }
+}
+
+/* HOME */
+.home {
+  margin-top: calc(min(20vw, 18vh));
+
+  .title {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    animation: none;
+    margin-bottom: calc(min(20vw, 18vh) - 100px);
+  }
+
+  .sparkle-green {
+    width: 40px;
+  }
+
+  .sparkle-red {
+    width: 40px;
+    margin-top: 20px;
+    margin-left: -14px;
+  }
+
+  .sparkle-yellow {
+    position: absolute;
+    width: 60px;
+    margin-top: 80px;
+  }
+}
+
+/* ABOUT */
+.about, .work {
+  margin-top: calc(min(5vw, 100px));
+  margin-bottom: calc(min(5vw, 100px));
+}
+
+/* WORK */
+.work {
+  .tags {
+    display: inline-flex;
+    padding: 10px 0px 30px;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  li {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-gap: 1px;
+
+  .card {
+    .image-link {
+      width: 300px;
+
+      img {
+        width: 300px;
+        height: 180px;
+      }
+    }
+
+    .description {
+      margin-top: 10px;
+    }
+  }
+}
+
+.home .card {
+  margin: 25px 0px;
+
+  .image-link {
+    width: 450px;
+
+    img {
+      width: 450px;
+      height: 250px;
+    }
+  }
+}
+
+.card {
+  align-items: center;
+  margin: 10px 0px;
+
+  .image-link {
+    display: flex;
+
+    img {
+      object-fit: cover;
+      transition: box-shadow 0.15s;
+      border: 2px solid $black;
+
+      &:hover {
+        box-shadow: 5px 5px 0px $yellow;
+      }
+    }
+  }
+}

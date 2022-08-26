@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
+import Home from './screens/Home.js';
+import About from './screens/About.js';
+import Work from './screens/Work.js';
+import './App.scss';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="navigation">
+          <NavLink exact to="/" className="nav-link" activeClassName="active-nav-link">TIFFANYWANG</NavLink>
+          <div className="right">
+            <NavLink exact to="/about" className="nav-link" activeClassName="active-nav-link">ABOUT</NavLink>
+            <NavLink exact to="/work" className="nav-link" activeClassName="active-nav-link">WORK</NavLink>
+          </div>
+        </div>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/work">
+            <Work />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
