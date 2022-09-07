@@ -1,31 +1,20 @@
-import coffee_static from "../assets/projects/coffee_static.png";
-import coffee_thumb from "../assets/projects/coffee_thumb.gif";
-import gm_static from "../assets/projects/gm_static.png";
-import gm_thumb from "../assets/projects/gm_thumb.gif";
-import boba_static from "../assets/projects/boba_static.png";
-import boba_thumb from "../assets/projects/boba_thumb.gif";
-import cardio_static from "../assets/projects/cardio_static.png";
-import cardio_thumb from "../assets/projects/cardio_thumb.gif";
-import daince_thumb from "../assets/projects/daince_thumb.gif";
-import daince_static from "../assets/projects/daince_static.png";
-import ashes_thumb from "../assets/projects/ashes_thumb.gif";
-import ashes_static from "../assets/projects/ashes_static.png";
-import slice_thumb from "../assets/projects/slice_thumb.gif";
-import slice_static from "../assets/projects/slice_static.png";
-import kitty_thumb from "../assets/projects/kitty_thumb.gif";
-import kitty_static from "../assets/projects/kitty_static.png";
-import spacebar_thumb from "../assets/projects/spacebar_thumb.gif";
-import spacebar_static from "../assets/projects/spacebar_static.png";
-import art_thumb from "../assets/projects/art_thumb.gif";
-import art_static from "../assets/projects/art_static.jpg";
+import cereal from "../assets/projects/cereal.png";
+import aot from "../assets/projects/aot.png";
+import generation from "../assets/projects/generation.png";
+import flan from "../assets/projects/flan.png";
+import spoilers from "../assets/projects/spoilers.png";
+import acnh from "../assets/projects/acnh.png";
+import bookshelf from "../assets/projects/bookshelf.png";
+import stocks from "../assets/projects/stocks.png";
+import movies from "../assets/projects/movies.png";
+import campsite from "../assets/projects/campsite.png";
+import blockchain from "../assets/projects/blockchain.png";
+import twitter from "../assets/projects/twitter.png";
 
 export const tags = {
-  GAME: "game",
   WEB: "web",
   MOBILE: "mobile",
   UIUX: "ui/ux",
-  ART: "art",
-  ANIMATION: "animation",
   WRITING: "writing",
 }
 
@@ -33,11 +22,13 @@ export const tools = {
   REACT: "react",
   AIRTABLE: "airtable",
   REDUX: "redux",
-  UNITY: "unity & c#",
-  PTS: "paint tool sai",
   HTMLCSS: "html/css",
   JS: "javascript",
-  REAPER: "reaper",
+  MONGODB: "mongodb",
+  EXPRESS: "express.js",
+  NODE: "node.js",
+  PYTHON: "python",
+  PANDAS: "pandas",
 }
 
 export const getProject = (name) => {
@@ -46,104 +37,124 @@ export const getProject = (name) => {
 
 const projects = [
   {
-    name: "BOBA",
-    description: "mobile puzzle game about drinking boba",
-    thumb: boba_thumb,
-    static: boba_static,
-    date: "aug 2020",
-    tags: [tags.MOBILE, tags.GAME, tags.ART],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://cnnmon.itch.io/boba",
-  },
-  {
-    name: "DAINCE",
-    description: "72-hour; learn to dance with ai",
-    thumb: daince_thumb,
-    static: daince_static,
-    date: "june 2020",
+    name: "Campsite Checker",
+    description: "snag an awesome campsite!",
+    thumb: campsite,
+    static: campsite,
+    date: "aug 2022",
     tags: [tags.WEB, tags.UIUX],
-    tools: [tools.HTMLCSS, tools.JS, tools.PTS],
-    link: "https://devpost.com/software/same-home-different-hacks-cssi-2020-team-1",
+    tools: [tools.REACT, tools.MONGODB, tools.EXPRESS, tools.NODE],
+    link: "https://github.com/christine2515/campsite-availability-checker",
   },
   {
-    name: "coffeelings",
-    description: "mood tracker & journaling chrome extension",
-    thumb: coffee_thumb,
-    static: coffee_static,
-    date: "march 2020",
-    tags: [tags.WEB, tags.ART],
-    tools: [tools.HTMLCSS, tools.JS, tools.PTS],
-    link: "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
+    name: "Bookshelf",
+    description: "aesthetic chrome extension that keeps track of your reading",
+    thumb: bookshelf,
+    static: bookshelf,
+    date: "aug 2022",
+    tags: [tags.WEB, tags.UIUX],
+    tools: [tools.HTMLCSS, tools.JS],
+    link: "https://github.com/christine2515/bookshelf-chrome-extension",
   },
   {
-    name: "CardioCasino",
-    description: "slots simulator about childhood & cardiovascular risk",
-    thumb: cardio_thumb,
-    static: cardio_static,
-    date: "oct 2019",
-    tags: [tags.GAME, tags.ART],
-    tools: [tools.UNITY, tools.PTS, tools.REAPER],
-    link: "https://cnnmon.itch.io/cardiocasino",
+    name: "Blockchain Betting Game",
+    description: "bet eth on a fun daily yes/no!",
+    thumb: blockchain,
+    static: blockchain,
+    date: "may 2022",
+    tags: [tags.WEB],
+    tools: [tools.REACT],
+    link: "https://github.com/christine2515/blockchain-project",
   },
   {
-    name: "LD45, Ashes to Ash",
-    description: "72-hour platformer eabout collecting emotions",
-    thumb: ashes_thumb,
-    static: ashes_static,
-    date: "oct 2019",
-    tags: [tags.GAME, tags.ART, tags.ANIMATION],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/",
+    name: "Valuation Calculator",
+    description: "scrapes company financials and calculates a company's intrinsic valuation",
+    thumb: stocks,
+    static: stocks,
+    date: "may 2022",
+    tags: [tags.WEB],
+    tools: [tools.PYTHON, tools.PANDAS],
+    link: "https://github.com/christine2515/valuationcalculator",
   },
   {
-    name: "LD44, Slice of Scythe",
-    description: "72-hour point-and-click game about grim reapers and hats",
-    thumb: slice_thumb,
-    static: slice_static,
-    date: "apr 2019",
-    tags: [tags.GAME, tags.ART],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://cnnmon.itch.io/slice-of-scythe",
+    name: "Flixster",
+    description: "app to view all available movies",
+    thumb: movies,
+    static: movies,
+    date: "may 2021",
+    tags: [tags.MOBILE, tags.UIUX],
+    tools: [tools.SWIFT],
+    link: "https://github.com/christine2515/flixster",
   },
   {
-    name: "good morning!",
-    description: "morning routine simulator",
-    thumb: gm_thumb,
-    static: gm_static,
-    date: "jan 2019",
-    tags: [tags.GAME, tags.ART, tags.ANIMATION],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://cnnmon.itch.io/goodmorning",
+    name: "fake Twitter",
+    description: "app to view, compose, favorite, and retweet tweets",
+    thumb: twitter,
+    static: twitter,
+    date: "april 2021",
+    tags: [tags.MOBILE, tags.UIUX],
+    tools: [tools.SWIFT],
+    link: "https://github.com/christine2515/twitter_ios_starter",
   },
   {
-    name: "AP Art, introspection",
-    description: "digital illustration sustained investigation",
-    thumb: art_thumb,
-    static: art_static,
-    date: "sep 2019 - may 2020",
-    tags: [tags.ART],
-    tools: [tools.PTS],
-    link: "https://www.behance.net/gallery/121922563/introspection",
+    name: "An Open Letter to the Person That Thinks It’s Ok To Eat Cereal With Water",
+    description: "Perhaps it’s that OP is protesting against the basic fabric of society itself that makes the combination so enticing.",
+    thumb: cereal,
+    static: cereal,
+    date: "june 2021",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2021-06-17/an-open-letter-to-the-person-that-thinks-its-ok-to-eat-cereal-with-water/",
   },
   {
-    name: "KittyClinic",
-    description: "cat clinic simulator about the effects of holistic treatment",
-    thumb: kitty_thumb,
-    static: kitty_static,
-    date: "nov 2018",
-    tags: [tags.GAME, tags.ART, tags.WRITING],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://cnnmon.itch.io/kittyclinic",
+    name: "Argument in the Office: Is “Attack on Titan” Worth the Hype?",
+    description: "“Attack on Titan” Is a Must-Watch. No Buts.",
+    thumb: aot,
+    static: aot,
+    date: "march 2021",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2021-03-18/argument-in-the-office-is-attack-on-titan-worth-the-hype/",
   },
   {
-    name: "Spacebar",
-    description: "space-based endless runner and typing game",
-    thumb: spacebar_thumb,
-    static: spacebar_static,
-    date: "sep 2018",
-    tags: [tags.GAME, tags.ART, tags.ANIMATION],
-    tools: [tools.UNITY, tools.PTS],
-    link: "https://cnnmon.itch.io/spacebar",
+    name: "Argument in the Office: Warning, This Article Contains Spoilers!",
+    description: "Don’t spoil it!",
+    thumb: spoilers,
+    static: spoilers,
+    date: "may 2021",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2021-05-18/argument-in-the-office-warning-this-article-contains-spoilers/",
+  },
+  {
+    name: "A Generation of Constant Crisis",
+    description: "Maybe we deserve a break.",
+    thumb: generation,
+    static: generation,
+    date: "december 2020",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2020-12-20/a-generation-of-constant-crisis/",
+  },
+  {
+    name: "Easy Creme Caramel Recipe",
+    description: "Are you craving dessert but are helpless when it comes to baking? Well, this recipe is perfect for you.",
+    thumb: flan,
+    static: flan,
+    date: "october 2020",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2020-10-12/easy-creme-caramel-recipe/",
+  },
+  {
+    name: "The Most Disappointing Game of 2020 is Animal Crossing: New Horizons",
+    description: "Today, my island is covered in weeds, I can’t terraform and, worst of all, I’ve failed to live up to my Pinterest Animal Crossing expectations.",
+    thumb: acnh,
+    static: acnh,
+    date: "april 2021",
+    tags: [tags.WRITING],
+    tools: [],
+    link: "https://dailynexus.com/2021-04-28/the-most-disappointing-game-of-2020-is-animal-crossing-new-horizons/",
   },
 ]
 

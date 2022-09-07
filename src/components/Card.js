@@ -16,7 +16,7 @@ function Card(props) {
     <div className="card">
       {getLink(<CardImage data={data} />, true)}
       <div className="description">
-        <p>
+        <p style={{paddingLeft: "10px"}}>
           {getLink(<b>{data.name}</b>, false)}<br />
           <b>{data.tags.join(', ')}</b>
           <span> {data.date}</span>

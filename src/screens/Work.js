@@ -24,10 +24,9 @@ function Work() {
   return (
     <div className="work">
       <div className="container">
-        <h2 className="lightgreen">works in & out<br />
-        of progress.</h2>
+        <h2 className="lightgreen">Projects</h2>
         <div className="tags">
-          <p>tags:</p>
+          <p>filter:</p>
           <ul>
             <li>
               <button className={active === 'all' ? 'active' : undefined} onClick={resetFilter}>all.</button>
