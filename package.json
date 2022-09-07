@@ -1,8 +1,8 @@
 {
   "name": "christinetu.github.io",
-  "homepage": "https://christine2515.github.io/personal-site",
+  "homepage": "https://christine2515.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/core": "^7.13.0",
     "@testing-library/jest-dom": "^5.14.1",
