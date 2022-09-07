@@ -1,6 +1,6 @@
 {
   "name": "christinetu.github.io",
-  "homepage": "https://christinetu.github.io",
+  "homepage": "https://christine2515.github.io/personal-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,6 +48,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.2.0"
   }
 }
